@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -19,12 +19,17 @@ function NormalNavbar() {
         setNavToggle((prevState) => !prevState)
     }
 
+    const handleAuthNavigate = (mode) => {
+        navigate(mode);
+        setNavToggle(false)
+    }
+
     const linkStyle = ({ isActive }) => `${isActive ? 'text-[#0C4521] underline underline-offset-13 decoration-[#0C4521]' : ''} hover:text-[#0C4521] hover:underline underline-offset-13 decoration-[#0C4521]`
     const navlinkStyle = ({ isActive }) => `${isActive ? 'text-[#0C4521] ' : ''} hover:text-[#0C4521] hover:underline underline-offset-10 decoration-[#0C4521]`
 
     return (
         <div className='relative'>
-            <header className='bg-[#F1ECEB] flex justify-between items-center w-[95%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
+            <header className='bg-[#FEFEFE] flex justify-between items-center w-[95%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
                 <nav className='max-lg:hidden'>
                     <ul className='flex gap-4 text-[1.2em] font-light'>
                         <li><NavLink className={linkStyle} to='services'>Services</NavLink></li>
@@ -50,8 +55,8 @@ function NormalNavbar() {
                         <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='blog'>Blog</NavLink></li>
                         <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='contact'>Contact</NavLink></li>
                         <section className='flex gap-3 my-2 '>
-                            <button className='text-[.8em] text-[#0C4521] bg-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'>Log In</button>
-                            <button className='text-[.8em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'>Log Out</button>
+                            <button onClick={() => handleAuthNavigate('/auth')} className='text-[.8em] text-[#0C4521] bg-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'><Link to='/auth'>Log In</Link></button>
+                            <button onClick={() => handleAuthNavigate('/auth/signUp')} className='text-[.8em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'><Link to='/auth/signUp'>Sign Up</Link></button>
                         </section>
                     </ul>
                 </nav>
@@ -72,8 +77,8 @@ function NormalNavbar() {
                         </span>
                     </section>
                     <section className='flex gap-3 max-lg:hidden'>
-                        <button className='text-[1em] text-[#0C4521] bg-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Log In</button>
-                        <button className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Log Out</button>
+                        <button onClick={() => handleAuthNavigate('/auth')} className='text-[1em] text-[#0C4521] bg-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Log In</button>
+                        <button onClick={() => handleAuthNavigate('/auth/signUP')}  className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Sign Up</button>
                     </section>
                 </div>
             </header>

@@ -5,6 +5,9 @@ import Services from "./pages/ServicesPage/Services"
 import Menu from "./pages/MenuPage/Menu"
 import Blog from "./pages/BlogPage/Blog"
 import Contact from "./pages/ContactPage/Contact"
+import AuthFormRootLayout from "./roots/AuthFormRootLayout"
+import SignIn from "./pages/authForm/SignInPage/SignIn"
+import SignUp from "./pages/authForm/SignUpPage/SignUp"
 
 
 function App() {
@@ -35,7 +38,21 @@ function App() {
           element: <Contact />
         }
       ]
-    }
+    },
+    {
+      path: '/auth',
+      element: <AuthFormRootLayout />,
+      children: [
+        {
+          index: true,
+          element: <SignIn />
+        },
+        {
+          path: 'signUp',
+          element: <SignUp />
+        }
+      ]
+    }, 
   ])
 
   return (
