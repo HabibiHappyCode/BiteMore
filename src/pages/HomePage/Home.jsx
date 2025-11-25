@@ -1,9 +1,9 @@
-import React from 'react'
+import LandingPage from "./LandingPage"
 
 function Home() {
     return (
         <div>
-            this is the home page
+           <LandingPage />
         </div>
     )
 }
