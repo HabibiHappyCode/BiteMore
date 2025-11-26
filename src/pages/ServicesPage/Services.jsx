@@ -1,9 +1,12 @@
-import React from 'react'
+
+import Premium from './Premium'
+import Delivery from './Delivery'
 
 function Services() {
     return (
-        <div>
-            this is the Services page
+        <div className='px-[8em] max-lg:px-3 bg-[#F5F5F5]'>
+          <Premium />
+          <Delivery />
         </div>
     )
 }
