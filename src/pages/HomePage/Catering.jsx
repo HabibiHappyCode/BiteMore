@@ -43,7 +43,7 @@ function Catering() {
 
                             <article className="px-5 py-8 text-center">
                                 <h2 className="font-strike text-[1.5em] text-[#0D4722] mb-3">{data.text}</h2>
-                                <p className="font-light text-[#5A337B]/90">{data.para}</p>
+                                <p className="font-light text-black/90">{data.para}</p>
                             </article>
                         </div>
                     ))
