@@ -32,14 +32,14 @@ function LandingPage() {
         autoplay: true,
         arrows: false,
         speed: 2000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
     };
     return (
         <div className="">
             <Slider {...settings}>
                 {
                     LANDPAGEDATA.map((data) => (
-                        <div className="relative">
+                        <div key={data.id} className="relative">
                             <div className="w-[100%] h-[80vh] max-lg:h-[70vh] max-md:h-[65vh]">
                                 <img className="object-cover w-[100%] h-[100%]" src={data.img} alt="" />
                             </div>
