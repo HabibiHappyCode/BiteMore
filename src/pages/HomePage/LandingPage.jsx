@@ -29,7 +29,7 @@ function LandingPage() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         speed: 2000,
         autoplaySpeed: 2000,
@@ -40,18 +40,18 @@ function LandingPage() {
                 {
                     LANDPAGEDATA.map((data) => (
                         <div className="relative">
-                            <div className="w-[100%] h-[80vh] max-lg:h-[70vh]">
+                            <div className="w-[100%] h-[80vh] max-lg:h-[70vh] max-md:h-[65vh]">
                                 <img className="object-cover w-[100%] h-[100%]" src={data.img} alt="" />
                             </div>
 
                             <div className="bg-[rgba(0,0,0,0.2)] w-[100%] h-[100%] absolute top-0 left-0 flex justify-center flex-col gap-2 px-15 max-lg:px-5">
-                                <p className="font-strike text-[.9em] font-bold max-lg:font-light capitalize text-white">{data.para}</p>
-                                <h1 className="font-strike text-[3em] max-lg:text-[1.8em] max-w-[45%] max-lg:max-w-[100%] font-bold text-[#C4FF88]">{data.text}</h1>
-                                <p className="text-[.9em] max-lg:text-[.8em] font-light  text-white ">{data.advertText}</p>
+                                <p className="font-strike text-[1.1em] font-bold max-lg:font-light capitalize text-white">{data.para}</p>
+                                <h1 className="font-strike text-[3em] max-lg:text-[2em] max-w-[45%] max-lg:max-w-[100%] font-bold text-[#C4FF88]">{data.text}</h1>
+                                <p className="text-[.9em] max-lg:text-[1.1em] font-light  text-white ">{data.advertText}</p>
 
                                 <div className="absolute bottom-[10%] flex gap-5">
-                                    <button className="text-[1em] max-lg:text-[.8em] text-[#0C4521] bg-[#C4FF88] font-medium px-5  max-lg:px-4 py-2 rounded cursor-pointer">Contact us</button>
-                                    <button className="text-[1em] max-lg:text-[.8em]  text-[#0C4521] bg-auto border-1 border-[#C4FF88] text-[#C4FF88] font-medium px-5 max-lg:px-4 py-2 rounded cursor-pointer">Menu</button>
+                                    <button className="text-[1em] max-lg:text-[1em] text-[#0C4521] bg-[#C4FF88] font-medium px-5  max-lg:px-4 py-2 rounded cursor-pointer">Contact us</button>
+                                    <button className="text-[1em] max-lg:text-[1em]  text-[#0C4521] bg-auto border-1 border-[#C4FF88] text-[#C4FF88] font-medium px-5 max-lg:px-4 py-2 rounded cursor-pointer">Menu</button>
                                 </div>
                             </div>
                         </div>
