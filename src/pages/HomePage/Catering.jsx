@@ -51,7 +51,7 @@ function Catering() {
 
             </section>
 
-            <button className="lg:hidden text-[1em] max-lg:text-[1em] bg-auto border-1 border-[#0D4722] text-[#0D4722] font-medium px-7 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center">Explore</button>
+            <button className="lg:hidden text-[1em] max-lg:text-[1em] bg-[#0D4722] text-[#fff] font-medium px-7 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center">Explore</button>
 
 
         </div>

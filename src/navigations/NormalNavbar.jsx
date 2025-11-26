@@ -65,22 +65,22 @@ function NormalNavbar() {
 
                 <nav className={`lg:hidden absolute bg-[rgba(254,254,254,0.9)] w-full top-14 left-0 translate-x-[-110%] ease-in-out duration-200 ${navToggle ? 'translate-x-[0%]' : ''}`}>
 
-                    <ul className='flex flex-col gap-4 text-[1.2em] font-light py-10 px-9  max-md:px-5'>
+                    <ul className='flex flex-col gap-4 text-[1.2em] max-md:text-[1em] font-light py-10 px-9  max-md:px-5'>
                         {
-                            isLoggedIn && <div className='border-t-1 border-b-1 border-black/10 pb-2 pt-2'>
+                            isLoggedIn && <div className='border-t-1 border-b-1 border-black/10 pt-2'>
                                 <p onClick={handleShowProfileNav} className='flex justify-between cursor-pointer  '>
                                     <span>My Profile</span>
                                     <span><RxCaretDown /></span>
                                 </p>
                                 <ul className={`mt-3 border-black/10 ease-in-out duration-200 overflow-hidden ${profileNav ? 'h-66' : 'h-0'}`}>
                                     <p className='flex flex-col gap-1 border-b-1 border-black/10 pb-2'>
-                                        <span className='font-strike text-[1.1em] uppercase'>{fullName}</span>
-                                        <span>{email}</span>
+                                        <span className='font-strike text-[1em] uppercase'>{fullName}</span>
+                                        <span className='text-[.9em]'>{email}</span>
                                     </p>
                                     <li className='border-b-1 border-black/10 pb-2 my-3'><Link>Profile</Link></li>
                                     <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Wishlist</Link></li>
                                     <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Orders</Link></li>
-                                    <li className=' pb-2'><Link>Notification</Link></li>
+                                    <li className=''><Link>Notification</Link></li>
                                 </ul>
                             </div>
                         }
@@ -88,10 +88,15 @@ function NormalNavbar() {
                         <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='menu'>Menu</NavLink></li>
                         <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='blog'>Blog</NavLink></li>
                         <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='contact'>Contact</NavLink></li>
-                        <section className='flex gap-3 my-2 '>
-                            <button onClick={() => handleAuthNavigate('/auth')} className='text-[.8em] text-[#0C4521] bg-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'><Link to='/auth'>Log In</Link></button>
-                            <button onClick={() => handleAuthNavigate('/auth/signUp')} className='text-[.8em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'><Link to='/auth/signUp'>Sign Up</Link></button>
-                        </section>
+                        {
+                            isLoggedIn ?
+                                <button onClick={handleLogOut} className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Log out</button>
+                                :
+                                <section className='flex gap-3 my-2 '>
+                                    <button onClick={() => handleAuthNavigate('/auth')} className='text-[.8em] text-[#0C4521] bg-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'><Link to='/auth'>Log In</Link></button>
+                                    <button onClick={() => handleAuthNavigate('/auth/signUp')} className='text-[.8em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded-xl cursor-pointer'><Link to='/auth/signUp'>Sign Up</Link></button>
+                                </section>
+                        }
                     </ul>
                 </nav>
                 {/* end of mobile */}

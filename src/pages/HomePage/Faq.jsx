@@ -57,10 +57,10 @@ function Faq() {
 
   return (
     <div className="p-17 max-lg:px-3 max-lg:py-10">
-      <h1 className="font-strike text-[3em] text-[#0D4722] text-center">
+      <h1 className="font-strike text-[3em]  max-md:text-[1.8em] text-[#0D4722] text-center">
         Frequently Asked Questions
       </h1>
-      <p className="text-center text-black/70 my-5">
+      <p className="text-center text-black/70 my-5 max-md:text-[.9em]">
         Find answers to common questions about our services
       </p>
 
@@ -72,7 +72,7 @@ function Faq() {
           >
             <h1
               onClick={() => handleSetQueIndex(data.id)}
-              className="p-4 flex justify-between items-center text-[1.2em] font-medium cursor-pointer text-[#0D4722]"
+              className="p-4 flex justify-between items-center text-[1.2em] max-md:text-[.9em] font-medium cursor-pointer text-[#0D4722]"
             >
               <span>{data.question}</span>
 
