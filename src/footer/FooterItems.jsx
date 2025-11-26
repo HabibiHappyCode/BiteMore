@@ -12,7 +12,9 @@ function FooterItems() {
                     <h1 className="font-strike text-[1.5em] ">Contact Info</h1>
                     <p className="text-[.9em] my-3 ">Hotline free 24/7</p>
 
-                    <p className="font-srike text-[1.3em]">+243 814 928 5789 </p>
+                    <p className="font-srike text-[1.3em]">
+                        <a href="tel:+2438149285789">+243 814 928 5789</a>
+                    </p>
 
                     <p className="text-[.9em] mt-3 ">
                         Ayedun community, oshogbo, osun state, nigeria
