@@ -42,9 +42,9 @@ function NormalNavbar() {
         logOut(navigate)
     }
 
-    const firstLetter = user.fullName.charAt()
-    const fullName = user.fullName;
-    const email = user.email
+    const firstLetter = user?.fullName.charAt()
+    const fullName = user?.fullName;
+    const email = user?.email
 
     const linkStyle = ({ isActive }) => `${isActive ? 'text-[#0C4521] underline underline-offset-13 decoration-[#0C4521]' : ''} hover:text-[#0C4521] hover:underline underline-offset-13 decoration-[#0C4521]`
     const navlinkStyle = ({ isActive }) => `${isActive ? 'text-[#0C4521] ' : ''} hover:text-[#0C4521] hover:underline underline-offset-10 decoration-[#0C4521]`
