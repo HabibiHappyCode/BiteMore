@@ -9,7 +9,7 @@ const useAuthStore = create((set) => ({
     signUp: (userData, navigate) => {
         localStorage.setItem("user", JSON.stringify(userData));
         set({ user: userData, isLoggedIn: false, error: null });
-        navigate("/signIn");
+        navigate("/auth");
     },
 
 

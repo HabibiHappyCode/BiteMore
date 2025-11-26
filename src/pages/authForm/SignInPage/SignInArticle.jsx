@@ -5,7 +5,7 @@ function SignInArticle() {
         <div className="w-[60%] max-md:w-[100%] py-5 px-3">
             <h1 className="text-[#0F5529] font-strike text-[2em] max-md:text-[1.5em]">Welcome Back to BiteMore</h1>
             <p className="text-black/70 max-md:text-[.9em] my-4">
-                Bite Rush delivers delicious meals fast, offering a wide variety, easy ordering, and exclusive deals for a seamless dining experience.
+               BiteMore delivers delicious meals fast, offering a wide variety, easy ordering, and exclusive deals for a seamless dining experience.
             </p>
 
             <article className="flex flex-col gap-2 p-5  max-md:px-2  rounded-lg bg-[#ffffff]">

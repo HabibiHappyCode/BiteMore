@@ -29,7 +29,7 @@ function NormalNavbar() {
 
     return (
         <div className='relative'>
-            <header className='bg-[#FEFEFE] flex justify-between items-center w-[95%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
+            <header className='bg-[#FEFEFE]  shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded flex justify-between items-center w-[95%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
                 <nav className='max-lg:hidden'>
                     <ul className='flex gap-4 text-[1.2em] font-light'>
                         <li><NavLink className={linkStyle} to='services'>Services</NavLink></li>
