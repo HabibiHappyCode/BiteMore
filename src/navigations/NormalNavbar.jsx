@@ -50,8 +50,8 @@ function NormalNavbar() {
     const navlinkStyle = ({ isActive }) => `${isActive ? 'text-[#0C4521] ' : ''} hover:text-[#0C4521] hover:underline underline-offset-10 decoration-[#0C4521]`
 
     return (
-        <div className='relative'>
-            <header className='bg-[rgba(254,254,254,0.5)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded flex justify-between items-center w-[95%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
+        <div className='relative z-100'>
+            <header className='bg-[rgba(254,254,254,0.9)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded flex justify-between items-center w-[95%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
                 <nav className='max-lg:hidden'>
                     <ul className='flex gap-4 text-[1.2em] font-light'>
                         <li><NavLink className={linkStyle} to='services'>Services</NavLink></li>
@@ -63,7 +63,7 @@ function NormalNavbar() {
 
                 {/*start of mobile device */}
 
-                <nav className={`lg:hidden absolute bg-[#F1ECEB] w-full top-14 left-0 translate-x-[-110%] ease-in-out duration-200 ${navToggle ? 'translate-x-[0%]' : ''}`}>
+                <nav className={`lg:hidden absolute bg-[rgba(254,254,254,0.9)] w-full top-14 left-0 translate-x-[-110%] ease-in-out duration-200 ${navToggle ? 'translate-x-[0%]' : ''}`}>
 
                     <ul className='flex flex-col gap-4 text-[1.2em] font-light py-10 px-9  max-md:px-5'>
                         {
@@ -118,7 +118,7 @@ function NormalNavbar() {
                                     <h1 className=' text-[1.2em] font-light text-[#0C4521]'><PiCaretDownBold /></h1>
                                 </main>
 
-                                <article className={`bg-[rgba(254,254,254,0.5)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] absolute left-[-200%] top-[4em] w-70 p-5 rounded ease-in-out duration-200 ${showSideNav ? 'translate-x-[-10%]' : 'translate-x-[150%]'}`}>
+                                <article className={`bg-[rgba(254,254,254,0.9)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] absolute left-[-200%] top-[4em] w-70 p-5 rounded ease-in-out duration-200 ${showSideNav ? 'translate-x-[-10%]' : 'translate-x-[150%]'}`}>
                                     <ul>
                                         <p className='flex flex-col gap-1 border-b-1 border-black/10 pb-2'>
                                             <span className='font-strike text-[1.1em] uppercase'>{fullName}</span>
