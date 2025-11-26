@@ -29,7 +29,9 @@ const useAuthStore = create((set) => ({
     },
 
     logOut: (navigate) => {
-        set({ user: null, isLoggedIn: false, error: null });
+        const savedUser = JSON.parse(localStorage.getItem("user"));
+
+        set({ user: savedUser, isLoggedIn: false, error: null });
         navigate("/");
     },
 }));
