@@ -42,7 +42,7 @@ function Delivery() {
                             y: -10,
                         }}
                         transition={{ type: "spring", duration: .5 }}
-                        className="w-[25%] max-lg:w-[30%] max-lg:w-[48%]  max-sm:w-[100%] flex flex-col gap-3 items-center justify-center py-3 px-5 text-center rounded-xl shadow-[0_1px_5px_rgba(0,0,0,0.2)]"
+                        className="w-[25%] max-lg:w-[30%] max-lg:w-[48%]  max-sm:w-[100%] flex flex-col gap-3 items-center justify-center py-3 max-md:py-10 px-5 text-center rounded-xl shadow-[0_1px_5px_rgba(0,0,0,0.2)]"
                         key={data.id}>
                         <h1 className="bg-[#DBFBEB] text-[#0F5529] text-[2em] font-bold p-3 rounded-xl shadow-[0_10px_10px_rgba(0,0,0,0.2)]  ">{data.icon}</h1>
                         <h3 className="font-strike text-[#0F5529] text-[1.1em] ">{data.text}</h3>
