@@ -8,6 +8,7 @@ import Contact from "./pages/ContactPage/Contact"
 import AuthFormRootLayout from "./roots/AuthFormRootLayout"
 import SignIn from "./pages/authForm/SignInPage/SignIn"
 import SignUp from "./pages/authForm/SignUpPage/SignUp"
+import { CartContextProvider } from "./store/ButtonContext"
 
 
 function App() {
@@ -52,12 +53,14 @@ function App() {
           element: <SignUp />
         }
       ]
-    }, 
+    },
   ])
 
   return (
     <>
-      <RouterProvider router={router} />
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
     </>
   )
 }

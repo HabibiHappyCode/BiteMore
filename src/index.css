@@ -5,3 +5,12 @@
   --font-strike: "Protest Strike", sans-serif;
   --font-cursive: "Edu NSW ACT Cursive", cursive;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
