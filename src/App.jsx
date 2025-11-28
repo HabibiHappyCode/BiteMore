@@ -9,6 +9,7 @@ import AuthFormRootLayout from "./roots/AuthFormRootLayout"
 import SignIn from "./pages/authForm/SignInPage/SignIn"
 import SignUp from "./pages/authForm/SignUpPage/SignUp"
 import { CartContextProvider } from "./store/ButtonContext"
+import MealDetails from "./pages/mealDetails/MealDetails"
 
 
 function App() {
@@ -27,8 +28,12 @@ function App() {
           element: <Services />
         },
         {
-          path: 'Menu',
+          path: 'menu',
           element: <Menu />
+        },
+        {
+          path: '/Menu/:idMeal',
+          element: <MealDetails />
         },
         {
           path: 'blog',

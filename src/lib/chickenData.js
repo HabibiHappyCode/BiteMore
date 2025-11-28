@@ -7,5 +7,5 @@ export async function fetchingChicken() {
 
     const resData = await response.json();
 
-    return resData.meals
+    return resData.meals 
 }
