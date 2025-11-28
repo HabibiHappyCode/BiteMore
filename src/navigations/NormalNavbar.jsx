@@ -72,7 +72,7 @@ function NormalNavbar() {
                                     <span>My Profile</span>
                                     <span><RxCaretDown /></span>
                                 </p>
-                                <ul className={`mt-3 border-black/10 ease-in-out duration-200 overflow-hidden ${profileNav ? 'h-66' : 'h-0'}`}>
+                                <ul className={`mt-3 border-black/10 ease-in-out duration-200 overflow-hidden ${profileNav ? 'h-60' : 'h-0'}`}>
                                     <p className='flex flex-col gap-1 border-b-1 border-black/10 pb-2'>
                                         <span className='font-strike text-[1em] uppercase'>{fullName}</span>
                                         <span className='text-[.9em]'>{email}</span>
