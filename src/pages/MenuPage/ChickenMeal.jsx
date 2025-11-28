@@ -4,6 +4,7 @@ import { clampText } from '../../util/clampText'
 import { currencyFormatter } from '../../util/formatting'
 import ErrorBlock from '../../Ui/ErrorBlock'
 import { Link } from 'react-router-dom'
+import SkeletonBlock from '../../Ui/SkeletonBlock'
 
 
 function ChickenMeal() {
@@ -13,11 +14,13 @@ function ChickenMeal() {
         queryFn: fetchingChicken
     })
 
+    const fillNum = new Array(8).fill()
+
 
     return (
         <div className='flex flex-wrap gap-4  w-[100%]  p-17 py-5 max-lg:px-3 max-lg:py-10'>
             {isLoading ?
-                <h1 className='text-center text-white'>this is loading your data</h1>
+               fillNum.map((___,index) => <SkeletonBlock key={index} />)
 
                 :
                 <>
