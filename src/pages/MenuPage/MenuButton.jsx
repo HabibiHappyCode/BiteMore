@@ -10,7 +10,7 @@ function MenuButton() {
     const { handleShowChicken, handleShowBeef, handleShowPasta, handleShowDessert, handleShowSeaFood } = useContext(CartContext)
     const { chicken, beef, pasta, dessert, seafood } = useContext(CartContext)
     return (
-        <div className=" w-[100%] flex gap-3 items-center justify-center overflow-auto scrollbar-hide pl-29 px-2 pb-15 max-md:pb-0">
+        <div className=" w-[100%] flex gap-3 items-center justify-center overflow-auto scrollbar-hide max-md:pl-55 px-2 pb-15 max-md:pb-0">
             <button
                 onClick={handleShowChicken}
                 className="flex items-center gap-1 text-[1em] px-3 py-1 rounded-full cursor-pointer bg-[linear-gradient(to_right,#52c234_0%,#C4FF88_51%,#52c234_100%)] bg-[length:200%_auto] hover:bg-[position:right_center] transition-all duration-500 hover:text-white"
