@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import CartContext from "../../store/ButtonContext"
+import ButtonContext from "../../store/ButtonContext"
 import ChickenMeal from "./ChickenMeal"
 import BeefMeals from "./BeefMeals"
 import PastaMeal from "./PastaMeal"
@@ -7,7 +7,7 @@ import DessertMeal from "./DessertMeal"
 import SeaFoodMeal from "./SeaFoodMeal"
 
 function MenuItems() {
-    const { chicken, beef, pasta, dessert, seafood } = useContext(CartContext)
+    const { chicken, beef, pasta, dessert, seafood } = useContext(ButtonContext)
     return (
         <div>
             {chicken && <ChickenMeal />}

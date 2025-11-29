@@ -8,8 +8,10 @@ import Contact from "./pages/ContactPage/Contact"
 import AuthFormRootLayout from "./roots/AuthFormRootLayout"
 import SignIn from "./pages/authForm/SignInPage/SignIn"
 import SignUp from "./pages/authForm/SignUpPage/SignUp"
-import { CartContextProvider } from "./store/ButtonContext"
+import { ButtonContextProvider } from "./store/ButtonContext"
 import MealDetails from "./pages/mealDetails/MealDetails"
+import { CartContextProvider } from "./store/CartContext"
+import Cart from "./pages/carts/Cart"
 
 
 function App() {
@@ -30,6 +32,10 @@ function App() {
         {
           path: 'menu',
           element: <Menu />
+        },
+        {
+          path: 'cart',
+          element: <Cart />
         },
         {
           path: '/Menu/:idMeal',
@@ -64,7 +70,9 @@ function App() {
   return (
     <>
       <CartContextProvider>
-        <RouterProvider router={router} />
+        <ButtonContextProvider>
+          <RouterProvider router={router} />
+        </ButtonContextProvider>
       </CartContextProvider>
     </>
   )
