@@ -5,15 +5,25 @@ import ErrorBlock from '../../Ui/ErrorBlock';
 import { RxArrowLeft } from "react-icons/rx";
 import { currencyFormatter } from '../../util/formatting';
 import { GrFormNextLink } from "react-icons/gr";
+import { useContext } from 'react';
+import CartContext from '../../store/CartContext';
 
 function MealDetails() {
     const params = useParams();
     const idMeal = params.idMeal;
 
+    const { items, addItem } = useContext(CartContext);
+
     const { data, isLoading, error } = useQuery({
         queryKey: ['meals_details'],
         queryFn: () => fetchingDetailsData(idMeal)
     })
+
+    const isInCart = items.some((i) => i.id === idMeal);
+
+    const handleAddToCart = (meal) => {
+        if (!isInCart) addItem(meal);
+    }
     return (
         <div className='py-30 max-lg:mt-15 max-md:w-[100%]  px-20 max-md:pb-20 max-lg:px-3 max-lg:py-10'>
             {error && <ErrorBlock />}
@@ -29,9 +39,9 @@ function MealDetails() {
                         </ul>
                         {
                             data.map((meal) => (
-                                <div 
-                                className='flex justify-between max-md:flex-wrap max-md:gap-10 ' 
-                                key={meal.idMeal}>
+                                <div
+                                    className='flex justify-between max-md:flex-wrap max-md:gap-10 '
+                                    key={meal.idMeal}>
                                     <div className='w-[45%] max-md:w-[100%] h-[70vh] max-md:h-[100%] overflow-hidden rounded-[1.5em] max-md:rounded-xl  shadow-[0_4px_20px_rgba(0,0,0,0.2)]' >
                                         <img className='w-[100%] h-[100%] object-cover ' src={meal.strMealThumb} alt={meal.strMeal} />
                                     </div>
@@ -111,7 +121,13 @@ function MealDetails() {
                                         </main>
 
                                         <section className='flex items-center justify-between  gap-3 my-2 '>
-                                            <button className='text-[1em] bg-[#ECFDF5] text-[#0C4521] border-1 border-[#0C4521] px-3 py-1 rounded cursor-pointer'>Add to Cart</button>
+                                            <button
+                                                disabled={meal.quantity >= 1}
+                                                onClick={() => handleAddToCart(meal)}
+                                                className='text-[1em] bg-[#ECFDF5] text-[#0C4521] border-1 border-[#0C4521] px-3 py-1 rounded cursor-pointer'
+                                            >
+                                                {isInCart ? 'Added to cart' : ' Add to Cart'}
+                                            </button>
                                             <button className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded cursor-pointer'>Order Now</button>
                                         </section>
                                     </div>

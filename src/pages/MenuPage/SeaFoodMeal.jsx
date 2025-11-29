@@ -9,7 +9,7 @@ import { fetchingSeafood } from '../../lib/seafoodData'
 function SeaFoodMeal() {
 
     const { data, isLoading, error, isError } = useQuery({
-        queryKey: ['chickens'],
+        queryKey: ['seafood'],
         queryFn: fetchingSeafood
     })
 

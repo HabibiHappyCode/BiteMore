@@ -10,7 +10,7 @@ import { fetchingDessert } from '../../lib/dessertData'
 function DessertMeal() {
 
     const { data, isLoading, error, isError } = useQuery({
-        queryKey: ['chickens'],
+        queryKey: ['desserts'],
         queryFn: fetchingDessert
     })
 

@@ -5,14 +5,24 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCaretDown } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import { PiCaretDownBold } from "react-icons/pi";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import useAuthStore from '../store/authContext';
+import CartContext from '../store/CartContext';
+import { motion } from 'framer-motion';
 
 function NormalNavbar() {
     const [navToggle, setNavToggle] = useState(false);
     const [showSideNav, setShowSideNav] = useState(false);
     const [profileNav, setProfileNav] = useState(false)
     const navigate = useNavigate();
+
+    const { items } = useContext(CartContext);
+
+    const cartItemsNum = items.reduce((totalNumber, item) => {
+        return totalNumber + item.quantity;
+    }, 0);
+
+
 
     const { isLoggedIn, user, logOut } = useAuthStore();
 
@@ -111,9 +121,20 @@ function NormalNavbar() {
                         <span className='cursor-pointer hover:text-[#0C4521]/50'>
                             <CiSearch />
                         </span>
-                        <span className='cursor-pointer hover:text-[#0C4521]/50'>
-                            <CiShoppingCart />
-                        </span>
+                        <Link to='cart'>
+                            <span className='cursor-pointer hover:text-[#0C4521]/50 relative'>
+                                <motion.small
+                                    animate={{ scale: [1, 1.2, 1] }}
+                                    transition={{ duration: 0.3 }}
+                                    key={cartItemsNum}
+                                    className='absolute left-[80%] bottom-[15px] text-[.5em] flex items-center justify-center bg-[#0C4521] w-5 h-5 rounded-full text-white'>
+                                    {cartItemsNum}
+                                </motion.small>
+                                <span><CiShoppingCart /></span>
+
+                            </span>
+                        </Link>
+
                     </section>
                     {
                         isLoggedIn ?
@@ -144,8 +165,8 @@ function NormalNavbar() {
                             </section>
                     }
                 </div>
-            </header>
-        </div>
+            </header >
+        </div >
     )
 }
 

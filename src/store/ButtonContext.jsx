@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const CartContext = createContext({
+const ButtonContext = createContext({
     showChicken: false,
     showBeef: false,
     showpasta: false,
@@ -13,7 +13,7 @@ const CartContext = createContext({
     handleShowSeaFood: () => { }
 })
 
-export const CartContextProvider = ({ children }) => {
+export const ButtonContextProvider = ({ children }) => {
     const [showChicken, setShowChicken] = useState(true);
     const [showBeef, setShowBeef] = useState(false);
     const [showpasta, setShowpasta] = useState(false);
@@ -74,10 +74,10 @@ export const CartContextProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={ctxContext}>
+        <ButtonContext.Provider value={ctxContext}>
             {children}
-        </CartContext.Provider>
+        </ButtonContext.Provider>
     )
 }
 
-export default CartContext
+export default ButtonContext
