@@ -40,10 +40,10 @@ function FooterItems() {
                     <h1 className="font-strike text-[1.5em] mb-3">Company</h1>
 
                     <ul>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Contact Us</Link></li>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Terms of Services</Link></li>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Privacy Policy</Link></li>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Pricing</Link></li>
+                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Contact Us</Link></li>
+                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Terms of Services</Link></li>
+                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Privacy Policy</Link></li>
+                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Pricing</Link></li>
 
                     </ul>
                 </section>
@@ -52,10 +52,10 @@ function FooterItems() {
                     <h1 className="font-strike text-[1.5em] mb-3">My account</h1>
 
                     <ul>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>My Wishlist</Link></li>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>My Services</Link></li>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>My Order</Link></li>
-                        <li className="text-[1em] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Shipping</Link></li>
+                        <li className="text-[1em]  w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>My Wishlist</Link></li>
+                        <li className="text-[1em]  w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>My Services</Link></li>
+                        <li className="text-[1em]  w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>My Order</Link></li>
+                        <li className="text-[1em]  w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Shipping</Link></li>
 
                     </ul>
                 </section>

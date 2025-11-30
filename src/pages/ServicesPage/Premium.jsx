@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Premium() {
     return (
         <div className="py-30  max-md:pb-20 flex flex-col gap-2 items-center justify-center">
-            <p className="bg-[#ECFDF5] w-[20%] max-lg:w-[50%] max-md:w-[80%] font-medium mb-5 py-1 flex items-center justify-center gap-2 rounded-full">
+            <p className="bg-[#ECFDF5] w-[30%] max-lg:w-[50%] max-md:w-[80%] font-medium mb-5 py-1 flex items-center justify-center gap-2 rounded-full">
                 <span><LuUtensilsCrossed /></span>
                 <span>Premium food delivery</span>
             </p>
