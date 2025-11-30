@@ -61,7 +61,7 @@ function NormalNavbar() {
 
     return (
         <div className='relative z-100'>
-            <header className='bg-[rgba(254,254,254,0.9)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded flex justify-between items-center w-[95%] max-sm:w-[100%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
+            <header className='bg-[rgba(254,254,254,0.9)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded flex justify-between items-center w-[95%] max-sm:w-[97%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
                 <nav className='max-lg:hidden'>
                     <ul className='flex gap-4 text-[1.2em] font-light'>
                         <li><NavLink className={linkStyle} to='services'>Services</NavLink></li>
@@ -116,7 +116,7 @@ function NormalNavbar() {
                     <h1 onClick={handleGoHome} className='text-[32px] max-md:text-[28px] text-[#0C4521] uppercase font-bold font-strike cursor-pointer'>bitemore</h1>
                 </div>
 
-                <div className='flex gap-5 items-center'>
+                <div className='flex gap-5 items-center justify-end w-[30%]'>
                     <section className='flex gap-1 items-center text-[1.5em] text-[#0C4521] '>
                         <span className='cursor-pointer hover:text-[#0C4521]/50'>
                             <CiSearch />

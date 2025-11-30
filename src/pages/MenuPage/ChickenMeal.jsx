@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+ import { useQuery } from '@tanstack/react-query'
 import { fetchingChicken } from '../../lib/chickenData'
 import { clampText } from '../../util/clampText'
 import { currencyFormatter } from '../../util/formatting'
@@ -25,7 +25,7 @@ function ChickenMeal() {
                 :
                 <>
                     {data?.map((meal) => (
-                        <div key={meal.idMeal} className="group bg-[#FFFFFF] w-[24%] max-lg:w-[32%] max-md:w-[48%] max-sm:w-[47.5%] rounded-xl overflow-hidden ease-in-out duration-200 hover:translate-y-[-10px]">
+                        <div key={meal.idMeal} className="group bg-[#FFFFFF] w-[23%] max-lg:w-[31%] max-md:w-[48%] max-sm:w-[47.5%] rounded-xl overflow-hidden ease-in-out duration-200 hover:translate-y-[-10px]">
                             <div className="w-[100%] h-[38vh]  max-sm:h-[25vh] ">
                                 <img className="object-cover w-[100%] h-[100%] ease-in-out duration-200 group-hover:scale-110" src={meal.strMealThumb} alt="" />
                             </div>

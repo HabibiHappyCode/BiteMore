@@ -1,4 +1,5 @@
 import { RiEmotionUnhappyLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 function NoItem() {
     return (
@@ -7,7 +8,7 @@ function NoItem() {
                 <span>Your Cart is empty</span>
                 <span><RiEmotionUnhappyLine /></span>
             </h2>
-            <button className=' text-[1em] text-white/80 rounded-full cursor-pointer px-10 py-1 bg-[linear-gradient(to_right,#52c234_0%,#C4FF88_51%,#52c234_100%)] bg-[length:200%_auto] hover:bg-[position:right_center] transition-all duration-500 hover:text-white'>Shop Now</button>
+            <button className=' text-[1em] text-white/80 rounded-full cursor-pointer px-10 py-1 bg-[linear-gradient(to_right,#52c234_0%,#C4FF88_51%,#52c234_100%)] bg-[length:200%_auto] hover:bg-[position:right_center] transition-all duration-500 hover:text-white'><Link to='/menu'>Shop Now</Link></button>
         </div>
     )
 }
