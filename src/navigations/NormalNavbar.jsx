@@ -64,10 +64,10 @@ function NormalNavbar() {
             <header className='bg-[rgba(254,254,254,0.9)] shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded flex justify-between items-center w-[95%] max-sm:w-[97%] mx-auto fixed self-center justify-self-center top-5 px-9 max-md:px-5 max-lg:py-1 py-2 rounded-full'>
                 <nav className='max-lg:hidden'>
                     <ul className='flex gap-4 text-[1.2em] font-light'>
-                        <li><NavLink className={linkStyle} to='services'>Services</NavLink></li>
-                        <li><NavLink className={linkStyle} to='menu'>Menu</NavLink></li>
-                        <li><NavLink className={linkStyle} to='blog'>Blog</NavLink></li>
-                        <li><NavLink className={linkStyle} to='contact'>Contact</NavLink></li>
+                        <li><NavLink className={linkStyle} to='/services'>Services</NavLink></li>
+                        <li><NavLink className={linkStyle} to='/menu'>Menu</NavLink></li>
+                        <li><NavLink className={linkStyle} to='/blog'>Blog</NavLink></li>
+                        <li><NavLink className={linkStyle} to='/contact'>Contact</NavLink></li>
                     </ul>
                 </nav>
 
@@ -94,10 +94,10 @@ function NormalNavbar() {
                                 </ul>
                             </div>
                         }
-                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='services'>Services</NavLink></li>
-                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='menu'>Menu</NavLink></li>
-                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='blog'>Blog</NavLink></li>
-                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='contact'>Contact</NavLink></li>
+                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='/services'>Services</NavLink></li>
+                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='/menu'>Menu</NavLink></li>
+                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='/blog'>Blog</NavLink></li>
+                        <li onClick={handleNavToggle} className='border-b-1 border-black/10 pb-2'><NavLink className={navlinkStyle} to='/contact'>Contact</NavLink></li>
                         {
                             isLoggedIn ?
                                 <button onClick={handleLogOut} className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Log out</button>

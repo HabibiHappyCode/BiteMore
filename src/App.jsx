@@ -12,6 +12,7 @@ import { ButtonContextProvider } from "./store/ButtonContext"
 import MealDetails from "./pages/mealDetails/MealDetails"
 import { CartContextProvider } from "./store/CartContext"
 import Cart from "./pages/carts/Cart"
+import Checkout from "./pages/checkout/Checkout"
 
 
 function App() {
@@ -48,7 +49,11 @@ function App() {
         {
           path: 'contact',
           element: <Contact />
-        }
+        },
+        {
+          path: 'checkout',
+          element: <Checkout />
+        },
       ]
     },
     {

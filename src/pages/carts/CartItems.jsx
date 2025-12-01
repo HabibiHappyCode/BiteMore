@@ -3,6 +3,7 @@ import CartContext from '../../store/CartContext'
 import { currencyFormatter } from '../../util/formatting'
 import { IoAddSharp } from "react-icons/io5";
 import { RiSubtractFill } from "react-icons/ri";
+import { motion } from 'framer-motion';
 
 function CartItems() {
     const { items, addItem, removeItem } = useContext(CartContext);
@@ -20,7 +21,9 @@ function CartItems() {
             <h1 className="font-strike text-[#0C4521] text-[2em] max-lg:text-[1.5em] mb-3 font-bold">My Cart</h1>
             {
                 items.map((meal) => (
-                    <section
+                    <motion.section
+                        layout
+                        exit={{ y: -30, opacity: 0 }}
                         className='border-t-1 border-[#0C4521] py-5 flex justify-between items-center'
                         key={meal.idMeal}>
                         <div className='flex gap-5'>
@@ -39,7 +42,7 @@ function CartItems() {
                             <span className='bg-[#0C4521] py-2 max-lg:py-1 px-4 max-md:px-2  max-md:text-[.8em] rounded text-white'>{meal.quantity}</span>
                             <button onClick={() => handleDecreaseItem(meal.idMeal)} className=' cursor-pointer'><RiSubtractFill /></button>
                         </div>
-                    </section>
+                    </motion.section>
                 ))
             }
         </div>
