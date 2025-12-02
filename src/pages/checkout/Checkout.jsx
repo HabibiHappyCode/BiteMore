@@ -17,10 +17,11 @@ function Checkout() {
 
         if (!isLoggedIn) {
             return navigate('/auth')
+        } else {
+            window.alert('your order has been place')
+            clearItem()
+            navigate('/')
         }
-
-        window.alert('your order has been place')
-        clearItem()
 
 
     }

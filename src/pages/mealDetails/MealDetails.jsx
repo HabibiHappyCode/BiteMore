@@ -7,6 +7,7 @@ import { currencyFormatter } from '../../util/formatting';
 import { GrFormNextLink } from "react-icons/gr";
 import { useContext } from 'react';
 import CartContext from '../../store/CartContext';
+import DetailsSkeleton from './DetailsSkeleton';
 
 function MealDetails() {
     const params = useParams();
@@ -27,7 +28,7 @@ function MealDetails() {
             {error && <ErrorBlock />}
             {
                 isLoading ?
-                    <p>the data is being loaded </p>
+                   <DetailsSkeleton />
                     :
                     <>
                         <ul className='flex items-center gap-3 text-[#0C4521] text-[1em]  max-sm:text-[.9em] font-bold mb-5'>
