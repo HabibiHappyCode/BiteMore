@@ -8,11 +8,13 @@ import Contact from "./pages/ContactPage/Contact"
 import AuthFormRootLayout from "./roots/AuthFormRootLayout"
 import SignIn from "./pages/authForm/SignInPage/SignIn"
 import SignUp from "./pages/authForm/SignUpPage/SignUp"
+import OrderNow from "./pages/orderNow/OrderNow"
 import { ButtonContextProvider } from "./store/ButtonContext"
 import MealDetails from "./pages/mealDetails/MealDetails"
 import { CartContextProvider } from "./store/CartContext"
 import Cart from "./pages/carts/Cart"
 import Checkout from "./pages/checkout/Checkout"
+import { ModalContextProvider } from "./store/ModalContext"
 
 
 function App() {
@@ -54,6 +56,10 @@ function App() {
           path: 'checkout',
           element: <Checkout />
         },
+         {
+          path: 'orderNow',
+          element: <OrderNow />
+        },
       ]
     },
     {
@@ -74,11 +80,13 @@ function App() {
 
   return (
     <>
-      <CartContextProvider>
-        <ButtonContextProvider>
-          <RouterProvider router={router} />
-        </ButtonContextProvider>
-      </CartContextProvider>
+      <ModalContextProvider>
+        <CartContextProvider>
+          <ButtonContextProvider>
+            <RouterProvider router={router} />
+          </ButtonContextProvider>
+        </CartContextProvider>
+      </ModalContextProvider>
     </>
   )
 }
