@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { fetchingDetailsData } from '../../lib/detailsData';
 import ErrorBlock from '../../Ui/ErrorBlock';
 import { RxArrowLeft } from "react-icons/rx";
@@ -8,12 +8,17 @@ import { GrFormNextLink } from "react-icons/gr";
 import { useContext } from 'react';
 import CartContext from '../../store/CartContext';
 import DetailsSkeleton from './DetailsSkeleton';
+import ModalContext from '../../store/ModalContext';
+import Modal from '../../Ui/Modal';
+import OrderNowForm from './OrderNowForm';
 
 function MealDetails() {
     const params = useParams();
+    const navigate = useNavigate()
     const idMeal = params.idMeal;
 
-    const { addItem } = useContext(CartContext)
+    const { addItem } = useContext(CartContext);
+    const { showOrderNowModal, modalProgress } = useContext(ModalContext)
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['meals_details'],
@@ -23,12 +28,26 @@ function MealDetails() {
     const handleAddToCart = (meal) => {
         addItem(meal)
     }
+
+    const handleOrderNow = () => {
+        showOrderNowModal()
+    }
+
+    // const handleNavigate = () => {
+    //     localStorage.setItem('orederNow', JSON.stringify(data));
+    //     navigate('/order_now')
+    // }
+
+
     return (
         <div className='py-30 max-lg:mt-15 max-md:w-[100%]  px-20 max-md:pb-20 max-lg:px-3 max-lg:py-10'>
             {error && <ErrorBlock />}
+            <Modal open={modalProgress === 'show'}>
+                <OrderNowForm  selectedMeal= {data}  />
+            </Modal>
             {
                 isLoading ?
-                   <DetailsSkeleton />
+                    <DetailsSkeleton />
                     :
                     <>
                         <ul className='flex items-center gap-3 text-[#0C4521] text-[1em]  max-sm:text-[.9em] font-bold mb-5'>
@@ -121,7 +140,7 @@ function MealDetails() {
 
                                         <section className='flex items-center justify-between  gap-3 my-2 '>
                                             <button onClick={() => handleAddToCart(meal)} className='text-[1em] bg-[#ECFDF5] text-[#0C4521] border-1 border-[#0C4521] px-3 py-1 rounded cursor-pointer'>Add to Cart</button>
-                                            <button className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded cursor-pointer'>Order Now</button>
+                                            <button onClick={handleOrderNow} className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-3 py-1 rounded cursor-pointer'>Order Now</button>
                                         </section>
                                     </div>
                                 </div>
