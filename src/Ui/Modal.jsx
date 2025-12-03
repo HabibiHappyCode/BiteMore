@@ -15,7 +15,7 @@ function Modal({ children, open }) {
     }, [open])
 
     return createPortal(
-        <dialog ref={dialog} className={`${open ? 'flex': ''} justify-self-center rounded-xl self-center w-[50%] max-md:w-full relative `}>
+        <dialog ref={dialog} className={`${open ? 'flex': ''} justify-self-center rounded-xl self-center w-[50%] max-md:w-full fixed `}>
             {children}
         </dialog>,
         document.getElementById('modal')

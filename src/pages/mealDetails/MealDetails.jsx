@@ -10,7 +10,7 @@ import CartContext from '../../store/CartContext';
 import DetailsSkeleton from './DetailsSkeleton';
 import ModalContext from '../../store/ModalContext';
 import Modal from '../../Ui/Modal';
-import OrderNowForm from './OrderNowForm';
+import OrderNowForm from '../orderNow/OrderNowForm';
 
 function MealDetails() {
     const params = useParams();
