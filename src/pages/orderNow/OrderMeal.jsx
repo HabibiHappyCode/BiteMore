@@ -12,7 +12,7 @@ function OrderMeal() {
 
 
         if (!isLoggedIn) {
-            return navigat('/auth')
+            return navigate('/auth')
         } else {
             window.alert('your order has been place')
             navigate('/')

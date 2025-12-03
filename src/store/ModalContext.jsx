@@ -3,7 +3,9 @@ import { createContext, useState } from "react";
 const ModalContext = createContext({
     modalProgress: '',
     showOrderNowModal: () => { },
-    closeOrderNowModal: () => { }
+    closeOrderNowModal: () => { },
+    showEditModal: () => { },
+    closeEditModat: () => { }
 })
 
 export function ModalContextProvider({ children }) {
@@ -17,13 +19,23 @@ export function ModalContextProvider({ children }) {
         setShowModal('')
     }
 
+    const showEditModal = () => {
+        setShowModal('showEdit')
+    }
+
+    const closeEditModal = () => {
+        setShowModal('')
+    }
+
     const ctxModal = {
         modalProgress: showModal,
         showOrderNowModal,
-        closeOrderNowModal
+        closeOrderNowModal,
+        showEditModal,
+        closeEditModal
     }
 
-    
+
     return <ModalContext.Provider value={ctxModal}>
         {children}
     </ModalContext.Provider>
