@@ -5,7 +5,9 @@ const ModalContext = createContext({
     showOrderNowModal: () => { },
     closeOrderNowModal: () => { },
     showEditModal: () => { },
-    closeEditModat: () => { }
+    closeEditModat: () => { },
+    showBlogModal: () => { },
+    closeBlogModal: () => { }
 })
 
 export function ModalContextProvider({ children }) {
@@ -27,12 +29,21 @@ export function ModalContextProvider({ children }) {
         setShowModal('')
     }
 
+    const showBlogModal = () => {
+        setShowModal('showBlog')
+    }
+
+    const closeBlogModal = () => {
+        setShowModal('')
+    }
     const ctxModal = {
         modalProgress: showModal,
         showOrderNowModal,
         closeOrderNowModal,
         showEditModal,
-        closeEditModal
+        closeEditModal,
+        showBlogModal,
+        closeBlogModal
     }
 
 
