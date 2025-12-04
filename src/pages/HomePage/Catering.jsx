@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const CATERDATA = [
     {
         id: 1,
@@ -30,6 +32,7 @@ function Catering() {
                     <span>BiteRush offers reliable, delicious catering services for events,</span>
                     <span>delivering fresh meals tailored to every occasion and taste.</span>
                 </p>
+                <button className=" text-[1em] max-lg:text-[1em] bg-[#0D4722] text-[#fff] font-medium px-7 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center"><Link to='/menu'>Explore</Link></button>
 
             </main>
 
@@ -51,7 +54,7 @@ function Catering() {
 
             </section>
 
-            <button className="lg:hidden text-[1em] max-lg:text-[1em] bg-[#0D4722] text-[#fff] font-medium px-7 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center">Explore</button>
+            <button className="lg:hidden text-[1em] max-lg:text-[1em] bg-[#0D4722] text-[#fff] font-medium px-7 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center"><Link to='/menu'>Explore</Link></button>
 
 
         </div>

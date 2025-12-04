@@ -15,6 +15,7 @@ import { CartContextProvider } from "./store/CartContext"
 import Cart from "./pages/carts/Cart"
 import Checkout from "./pages/checkout/Checkout"
 import { ModalContextProvider } from "./store/ModalContext"
+import TermsOfServices from "./pages/TermsOfServices/TermsOfServices"
 
 
 function App() {
@@ -56,9 +57,13 @@ function App() {
           path: 'checkout',
           element: <Checkout />
         },
-         {
+        {
           path: 'orderNow',
           element: <OrderNow />
+        },
+        {
+          path: 'termsOfServices',
+          element: <TermsOfServices />
         },
       ]
     },
