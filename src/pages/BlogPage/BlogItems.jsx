@@ -1,9 +1,9 @@
-import { motion, number } from "framer-motion"
+import { motion} from "framer-motion"
 import { clampText } from "../../util/clampText"
 import { useContext, useState } from "react"
-// import Modal from '../../ui/Modal'
 import ModalContext from "../../store/ModalContext"
 import BlogModal from "./BlogModal"
+import Modal from "../../Ui/Modal"
 
 const BLOGDATA = [
     {
@@ -58,6 +58,7 @@ function BlogItems() {
 
     return (
         <>
+       
             <Modal open={modalProgress === 'showBlog'}>
                 <BlogModal blogs={selectedBlog} />
             </Modal>
