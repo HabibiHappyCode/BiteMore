@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import ModalContext from "../../store/ModalContext"
-import Modal from '../../Ui/Modal'
+import Modal from '../../Ui/Modal.jsx'
 import EditCustomerForm from "./EditCustomerForm"
 
 

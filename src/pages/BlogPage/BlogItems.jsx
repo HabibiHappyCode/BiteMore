@@ -1,7 +1,7 @@
 import { motion, number } from "framer-motion"
 import { clampText } from "../../util/clampText"
 import { useContext, useState } from "react"
-import Modal from '../../ui/Modal'
+// import Modal from '../../ui/Modal'
 import ModalContext from "../../store/ModalContext"
 import BlogModal from "./BlogModal"
 
