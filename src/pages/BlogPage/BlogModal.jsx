@@ -9,9 +9,9 @@ function BlogModal({ blogs }) {
         closeBlogModal()
     }
     return (
-        <section className="w-[100%] p-10  max-sm:w-[100%] flex flex-col gap-3 relative  ">
-            <p onClick={handleCloseBlog} className="absolute top-5 text-[1.2em] right-10 max-md:right-5 cursor-pointer"><RxCross1 /></p>
-            <div className="w-[100%] h-[50vh]">
+        <section className="w-[100%] p-10 max-sm:px-5 max-sm:w-[100%] flex flex-col gap-3 relative  ">
+            <p onClick={handleCloseBlog} className="absolute top-7 bg-[#07BC0C] text-white font-bold rounded-full p-1 text-[1.2em] right-7 max-md:right-5 cursor-pointer"><RxCross1 /></p>
+            <div className="w-[100%] h-[50vh] max-sm:h-[40vh]">
                 <img className="w-[100%] h-[100%] object-cover" src={blogs?.img} alt="" />
             </div>
 

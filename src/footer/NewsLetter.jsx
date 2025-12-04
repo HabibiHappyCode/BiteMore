@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 function NewsLetter() {
     return (
@@ -19,7 +20,7 @@ function NewsLetter() {
                 <h1 className='font-medium text-[1.8em] my-5'>20% off!</h1>
                 <main className='flex max-md:flex-col max-md:gap-2 items-start justify-between'>
                     <h2 className='font-bold max-md:font-light max-w-[50%] max-md:max-w-[100%] text-[1.7em] max-md:text-[1.4em]'>With Our Menu To Meet Symphony of Flavors</h2>
-                    <button className='text-[1em] max-lg:text-[1em] bg-[#0D4722] text-[#fff] font-light px-5 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center'>Get in touch</button>
+                    <button className='text-[1em] max-lg:text-[1em] bg-[#0D4722] text-[#fff] font-light px-5 max-lg:px-4 py-2 rounded cursor-pointer flex my-5 justify-self-center'><Link to='/contact'>Get in touch</Link></button>
                 </main>
             </section>
         </div>
