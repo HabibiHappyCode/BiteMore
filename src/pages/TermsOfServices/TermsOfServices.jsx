@@ -34,7 +34,7 @@ function TermsOfServices() {
             <ModOfTerms />
             <Termination />
             <Law />
-            <ContactInfo />
+            <ContactInfo value={3} />
         </div>
     )
 }

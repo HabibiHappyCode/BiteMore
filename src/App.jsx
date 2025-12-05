@@ -16,6 +16,7 @@ import Cart from "./pages/carts/Cart"
 import Checkout from "./pages/checkout/Checkout"
 import { ModalContextProvider } from "./store/ModalContext"
 import TermsOfServices from "./pages/TermsOfServices/TermsOfServices"
+import PrivacyAndPolicy from "./pages/PrivacyAndPolicy/PrivacyAndPolicy"
 
 
 function App() {
@@ -65,6 +66,11 @@ function App() {
           path: 'termsOfServices',
           element: <TermsOfServices />
         },
+        {
+          path: 'privacyAndPolicy',
+          element: <PrivacyAndPolicy />
+        },
+       
       ]
     },
     {
