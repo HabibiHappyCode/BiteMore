@@ -42,9 +42,7 @@ function FooterItems() {
                     <ul>
                         <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link to='/contact'>Contact Us</Link></li>
                         <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link to='/termsOfServices'>Terms of Services</Link></li>
-                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Privacy Policy</Link></li>
-                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link>Pricing</Link></li>
-
+                        <li className="text-[1em] w-[40%]  max-lg:w-[60%] mb-2 font-light ease-in-out duration-200 hover:text-[#C4FF88] hover:translate-x-2"><Link to='/privacyAndPolicy'>Privacy Policy</Link></li>
                     </ul>
                 </section>
 
