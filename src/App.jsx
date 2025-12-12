@@ -17,6 +17,8 @@ import Checkout from "./pages/checkout/Checkout"
 import { ModalContextProvider } from "./store/ModalContext"
 import TermsOfServices from "./pages/TermsOfServices/TermsOfServices"
 import PrivacyAndPolicy from "./pages/PrivacyAndPolicy/PrivacyAndPolicy"
+import DashBoardRoot from "./roots/DashBoardRoot"
+import Overview from "./DashboardPages/overview/Overview"
 
 
 function App() {
@@ -87,6 +89,16 @@ function App() {
         }
       ]
     },
+    {
+      path: '/overview',
+      element: <DashBoardRoot />,
+      children: [
+        {
+          index: true,
+          element: <Overview /> 
+        }
+      ]
+    }
   ])
 
   return (
