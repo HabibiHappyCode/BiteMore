@@ -150,10 +150,10 @@ function NormalNavbar() {
                                             <span className='font-strike text-[1.1em] uppercase'>{fullName}</span>
                                             <span className='text-[.9em]'>{email}</span>
                                         </p>
-                                        <li className='border-b-1 border-black/10 pb-2 my-3'><Link>Profile</Link></li>
-                                        <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Wishlist</Link></li>
-                                        <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Orders</Link></li>
-                                        <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Notification</Link></li>
+                                        <li className='border-b-1 border-black/10 pb-2 my-3'><Link to='/overview'>Profile</Link></li>
+                                        <li className='border-b-1 border-black/10 pb-2  my-3'><Link to='/overview'>Wishlist</Link></li>
+                                        <li className='border-b-1 border-black/10 pb-2  my-3'><Link to='/overview'>Orders</Link></li>
+                                        <li className='border-b-1 border-black/10 pb-2  my-3'><Link to='/overview'>Notification</Link></li>
                                     </ul>
                                     <button onClick={handleLogOut} className='text-[1em] bg-[#0C4521] text-white border-1 border-[#0C4521] px-4 py-1 rounded-xl cursor-pointer'>Log out</button>
                                 </article>
