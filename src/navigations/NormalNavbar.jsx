@@ -87,10 +87,10 @@ function NormalNavbar() {
                                         <span className='font-strike text-[1em] uppercase'>{fullName}</span>
                                         <span className='text-[.9em]'>{email}</span>
                                     </p>
-                                    <li className='border-b-1 border-black/10 pb-2 my-3'><Link>Profile</Link></li>
-                                    <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Wishlist</Link></li>
-                                    <li className='border-b-1 border-black/10 pb-2  my-3'><Link>Orders</Link></li>
-                                    <li className=''><Link>Notification</Link></li>
+                                    <li className='border-b-1 border-black/10 pb-2 my-3'><Link to='/overview'>Profile</Link></li>
+                                    <li className='border-b-1 border-black/10 pb-2  my-3'><Link to='/overview'>Wishlist</Link></li>
+                                    <li className='border-b-1 border-black/10 pb-2  my-3'><Link to='/overview'>Orders</Link></li>
+                                    <li className='' to='/overview'><Link>Notification</Link></li>
                                 </ul>
                             </div>
                         }
